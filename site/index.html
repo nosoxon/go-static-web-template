@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Media Menu</title>
+        <style type=text/css>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+            }
+
+            html {
+                font-size: medium;
+            }
+
+            menu {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translateX(-50%) translateY(-50%);
+                width: 24rem;
+
+                display: grid;
+                grid-template-rows: 1fr;
+                row-gap: 0.8rem;
+            }
+
+            menu > a {
+                padding: 1.2rem;
+                border: 1px solid #999999;
+
+                display: grid;
+                grid-template-columns: min-content 1fr;
+                column-gap: 2rem;
+                align-items: center;
+
+                text-decoration: none;
+                color: #444444;
+                transition: background 0.3s;
+            }
+
+            menu > a:hover {
+                background: #dddddd;
+            }
+
+            menu > a > img {
+                width: 48px;
+                filter: invert(66%) sepia(0%) saturate(0%)
+                        hue-rotate(1deg) brightness(91%) contrast(94%);
+            }
+
+            menu > a > l {
+                font-family: monospace;
+                font-size: 1.5rem;
+            }
+        </style>
+    </head>
+    <body>
+        <menu>
+            <a href=/movies>
+                <img src=/movie.svg>
+                <l>Movies</l>
+            </a>
+            <a href=/tv>
+                <img src=/tv.svg>
+                <l>Television</l>
+            </a>
+            <a href=/download>
+                <img src=/download.svg>
+                <l>Downloads</l>
+            </a>
+        </menu>
+    </body>
+</html>
